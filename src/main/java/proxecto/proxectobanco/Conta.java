@@ -7,7 +7,7 @@ package proxecto.proxectobanco;
 public class Conta {
     protected Persoa titular;
     protected String numero;
-    protected float saldo;
+    private float saldo;
 
     public Conta() {
         titular=null;
@@ -15,12 +15,20 @@ public class Conta {
         saldo=1000;
     }
     public boolean retirar(float valor){
-        if (saldo-valor<0)
+        if (getSaldo()-valor<0)
             return false;
-        saldo-=valor;
+        setSaldo(getSaldo() - valor);
         return true;
     }
     public void ingresar(float valor){
-        saldo+=valor;
+        setSaldo(getSaldo() + valor);
+    }
+
+    public float getSaldo() {
+        return saldo;
+    }
+
+    public void setSaldo(float saldo) {
+        this.saldo = saldo;
     }
 }
