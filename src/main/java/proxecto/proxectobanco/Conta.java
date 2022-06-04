@@ -31,4 +31,10 @@ public class Conta {
     public void setSaldo(float saldo) {
         this.saldo = saldo;
     }
+    
+ public void inicializarSaldo(float saldo){
+this.saldo=0.00f;   
+ }
+    
+ 
 }
