@@ -12,6 +12,9 @@ public class Persoa{
     private String telefono;
     private String email;
 
+    /**
+     *
+     */
     public Persoa() {
         nome=null;
         enderezo=null;
