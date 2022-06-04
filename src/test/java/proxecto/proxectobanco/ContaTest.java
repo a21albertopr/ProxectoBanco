@@ -1,3 +1,4 @@
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/UnitTests/JUnit5TestClass.java to edit this template
@@ -16,24 +17,27 @@ public class ContaTest {
     public ContaTest() {
     }
 
-    @Test
-    public void testRetirar() {
-        System.out.println("retirar");
-        float valor = 0.0F;
+    @org.junit.jupiter.api.Test
+    public void testRetirar1() {
+        System.out.println("Proba ao método retirar para o valor 100");
+        float valor = 100;
+        Conta instance = new Conta();
+        boolean expResult = true;
+        boolean result = instance.retirar(valor);
+        assertEquals(expResult, result);
+       
+    }
+
+    
+        @org.junit.jupiter.api.Test
+    public void testRetirar2() {
+        System.out.println("Proba ao método retirar para o valor 2000");
+        float valor = 2000;
         Conta instance = new Conta();
         boolean expResult = false;
         boolean result = instance.retirar(valor);
         assertEquals(expResult, result);
-        fail("The test case is a prototype.");
-    }
-
-    @Test
-    public void testIngresar() {
-        System.out.println("ingresar");
-        float valor = 0.0F;
-        Conta instance = new Conta();
-        instance.ingresar(valor);
-        fail("The test case is a prototype.");
+       
     }
     
 }
